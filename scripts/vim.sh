@@ -1,6 +1,22 @@
 #!/usr/bin/env bash
 
-apt-get install -y vim git curl
+if [ $# -eq 0 ]; then
+  echo "Usage: `basename $0` <github_url>"
+  exit 1
+fi
+
+github_url="$1"
+
+echo ">>> Installing vim"
+sudo apt-get install -y vim
+
+echo ">>> Installing Vundle"
 git clone https://github.com/gmarik/Vundle.vim.git /home/vagrant/.vim/bundle/Vundle.vim
-curl https://raw.github.com/bmalkowski/dev/.vimrc > /home/vagrant/.vimrc
-vim +BundleInstall +qall 2&> /dev/null
+sudo chown -R vagrant:vagrant /home/vagrant/.vim
+
+echo ">>> Configuring vim"
+curl --silent -L $github_url/configs/.vimrc > /home/vagrant/.vimrc
+sudo chown -R vagrant:vagrant /home/vagrant/.vimrc
+
+sudo su - vagrant -c 'vim +BundleInstall +qall'
+

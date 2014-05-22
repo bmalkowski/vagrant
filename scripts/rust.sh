@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 
-apt-get install -y curl
-
-# Rust Nightly Install
+echo ">>> Installing Rust Nightly"
 curl -s http://www.rust-lang.org/rustup.sh | sudo sh
+
