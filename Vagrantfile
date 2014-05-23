@@ -18,8 +18,8 @@ Vagrant.configure(2) do |config|
 	  vb.customize ["modifyvm", :id, "--memory", server_memory]
   end
 
-  config.vm.provision :shell, :path: "#{script_url}/base.sh"
-  config.vm.provision :shell, :path: "#{script_url}/vim.sh", args: github_url
-  config.vm.provision :shell, :path: "#{script_url}/tmux.sh", args: github_url
-  config.vm.provision :shell, :path: "#{script_url}/zsh.sh"
+  config.vm.provision :shell, path: "#{script_url}/base.sh"
+  config.vm.provision :shell, path: "#{script_url}/vim.sh", args: github_url
+  config.vm.provision :shell, path: "#{script_url}/tmux.sh", args: github_url
+  config.vm.provision :shell, path: "#{script_url}/zsh.sh"
 end
