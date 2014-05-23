@@ -12,11 +12,14 @@ sudo apt-get install -y vim
 
 echo ">>> Installing Vundle"
 git clone https://github.com/gmarik/Vundle.vim.git /home/vagrant/.vim/bundle/Vundle.vim
-sudo chown -R vagrant:vagrant /home/vagrant/.vim
 
 echo ">>> Configuring vim"
-curl --silent -L $github_url/configs/.vimrc > /home/vagrant/.vimrc
+curl --silent -L $github_url/configs/vimrc > /home/vagrant/.vimrc
+
+mkdir -p /home/vagrant/.vim/backup
+mkdir -p /home/vagrant/.vim/swap
 sudo chown -R vagrant:vagrant /home/vagrant/.vimrc
+sudo chown -R vagrant:vagrant /home/vagrant/.vim
 
 sudo su - vagrant -c 'vim +BundleInstall +qall'
 

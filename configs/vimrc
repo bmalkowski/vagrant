@@ -1,0 +1,36 @@
+set nocompatible
+filetype off
+
+" Vundle
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+Bundle 'gmarik/Vundle.vim'
+Bundle 'altercation/vim-colors-solarized'
+Bundle 'bling/vim-airline'
+Bundle 'airblade/vim-gitgutter'
+Bundle 'tpope/vim-fugitive'
+call vundle#end()
+
+" Settings
+filetype plugin indent on
+set number
+syntax enable
+set background=dark
+colorscheme solarized
+
+" Tabs to spaces
+set tabstop=2
+set shiftwidth=2
+set softtabstop=2
+set expandtab
+
+" Error noise 
+set visualbell
+set noerrorbells
+
+" Custom folders
+set backupdir=~/.vim/backup//
+set directory=~/.vim/swap//
+
+" Airline
+set laststatus=2

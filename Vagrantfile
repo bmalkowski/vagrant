@@ -20,4 +20,6 @@ Vagrant.configure(2) do |config|
 
   config.vm.provision :shell, :path: "#{script_url}/base.sh"
   config.vm.provision :shell, :path: "#{script_url}/vim.sh", args: github_url
+  config.vm.provision :shell, :path: "#{script_url}/tmux.sh", args: github_url
+  config.vm.provision :shell, :path: "#{script_url}/zsh.sh"
 end
