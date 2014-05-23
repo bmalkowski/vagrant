@@ -1,4 +1,8 @@
 #!/usr/bin/env bash
 
+echo ">>> Installing ZSH"
+sudo apt-get install -y zsh
+
 echo ">>> Installing Oh My ZSH"
-sudo curl --silent -L http://install.ohmyz.sh | sh
+sudo curl -sL http://install.ohmyz.sh | sudo sh
+
