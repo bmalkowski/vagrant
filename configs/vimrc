@@ -26,7 +26,6 @@ set softtabstop=2
 set expandtab
 
 " Error noise 
-set visualbell
 set noerrorbells
 
 " Custom folders
