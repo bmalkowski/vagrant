@@ -9,6 +9,7 @@ Bundle 'altercation/vim-colors-solarized'
 Bundle 'bling/vim-airline'
 Bundle 'airblade/vim-gitgutter'
 Bundle 'tpope/vim-fugitive'
+Bundle 'scrooloose/nerdtree'
 call vundle#end()
 
 " Settings

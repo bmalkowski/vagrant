@@ -9,12 +9,12 @@ fi
 version=$1
 if [ "$version" = "nightly" ]; then
   echo ">>> Installing Julia Nightly"
-  sudo add-apt-repository ppa:staticfloat/julia-deps
-  sudo add-apt-repository ppa:staticfloat/julianightlies
+  sudo add-apt-repository -y ppa:staticfloat/julia-deps
+  sudo add-apt-repository -y ppa:staticfloat/julianightlies
   sudo apt-get update
   sudo apt-get install -y julia
-  sudo add-apt-repository --remove ppa:staticfloat/julia-deps
-  sudo add-apt-repository --remove ppa:staticfloat/julianightlies
+  sudo add-apt-repository -y --remove ppa:staticfloat/julia-deps
+  sudo add-apt-repository -y --remove ppa:staticfloat/julianightlies
   sudo apt-get update
 elif [ "$version" = "release" ]; then
   echo ">>> Installing Julia Release"

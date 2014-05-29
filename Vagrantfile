@@ -1,6 +1,8 @@
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
 
+home_dir = "/home/vagrant"
+
 github_url = "https://raw.githubusercontent.com/bmalkowski/vagrant/master"
 script_url = "#{github_url}/scripts"
 
