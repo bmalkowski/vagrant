@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 if [ $# -eq 0 ]; then
-  echo "Usage: `basename $0` <github_url>"
+  echo "Usage: `basename $0` <github_url> [home_dir]"
   exit 1
 fi
 
