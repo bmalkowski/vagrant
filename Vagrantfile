@@ -7,7 +7,7 @@ github_url = "https://raw.githubusercontent.com/bmalkowski/vagrant/master"
 script_url = "#{github_url}/scripts"
 
 server_ip = "192.168.50.50"
-server_memory = 512
+server_memory = 1024 
 
 Vagrant.configure(2) do |config|
   config.vm.box = "ubuntu/trusty64"
